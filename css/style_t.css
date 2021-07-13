@@ -1,0 +1,44 @@
+.header_wrap {
+  width: 90%;
+}
+.banner_imege1_1 {
+  display: none;
+}
+.banner_imege1_2 {
+  display: block;
+  max-width: 100%;
+}
+.icon-logo {
+  width: 140px;
+  height: 30px;
+  background-position: 0 -150px;
+}
+.gnb {
+  padding-left: 220px;
+}
+.gnb > ul > li {
+  font-size: 14px;
+  padding: 0 20px;
+}
+.content1 {
+  padding-bottom: 100px;
+}
+.content1_img_box img {
+  width: 230px;
+}
+.content2 {
+  padding-bottom: 100px;
+}
+.content2_img_box img {
+  width: 190px;
+}
+.content3 {
+  padding-bottom: 100px;
+}
+.content4 {
+  padding-bottom: 100px;
+}
+.content4_img_box img {
+  width: 202px;
+  height: 202px;
+}

@@ -35,30 +35,40 @@ header h1 a {
   background-position: 0 0;
 }
 
-.blind {
+/*.blind {
   position: absolute;
   left: -9999px;
   text-indent: -9999px;
   font-size: 0;
-} /* 뭔가 로고 이미지 안뜨는 경우를 대비한 텍스트인 것 같으나 진짜 하나도 모르겠음*/
+} 뭔가 로고 이미지 안뜨는 경우를 대비한 텍스트인 것 같으나 진짜 하나도 모르겠음*/
 
 .gnb {
   padding-left: 270px;
 }
-.gnb ul {
+.gnb > ul {
   height: 70px;
   position: relative;
 }
-.gnb ul li {
+.gnb > ul > li {
   display: inline-block;
   padding: 0 30px;
   line-height: 70px;
+}
+.sub_gnb {
+  position: absolute;
+  top: 70px;
+  visibility: hidden;
+}
+
+.gnb > ul > li > a:hover .sub_gnb {
+  visibility: inherit;
 }
 
 .button_wrap {
   position: absolute;
   top: 0;
   right: 0;
+  padding-right: 5px;
 }
 .button_wrap button {
   line-height: 70px;
@@ -70,17 +80,28 @@ header h1 a {
 
 .banner {
   width: 100%;
-  height: 550px;
   padding: 70px 0 150px 0;
 }
 .banner_wrap {
-  width: 2000px;
+  width: 100%;
   margin: 0 auto;
 }
+.banner_imege1_1 {
+  width: 100%;
+  overflow: hidden;
+}
+.banner_imege1_2 {
+  width: 100%;
+  display: none;
+}
+.banner_imege1_3 {
+  width: 100%;
+  display: none;
+}
+
 .main {
   width: 100%;
 }
-
 .content1 {
   width: 1200px;
   margin: 0 auto;
@@ -108,7 +129,20 @@ header h1 a {
 }
 .content1_img {
   display: flex;
+  justify-content: center;
   align-items: center;
+}
+.on {
+  display: none;
+  opacity: 0;
+}
+.content1_img_box a:hover .off {
+  display: none;
+}
+.content1_img_box a:hover .on {
+  display: block;
+  opacity: 1;
+  transition: 1s ease-in-out;
 }
 .content1_img_box p {
   text-align: center;
@@ -148,6 +182,7 @@ header h1 a {
 .content2_img {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 .content2_img_box p {
   text-align: center;
@@ -183,6 +218,7 @@ header h1 a {
 }
 .content4_img {
   display: flex;
+  justify-content: center;
   align-items: center;
 }
 .content4_img_box img {
